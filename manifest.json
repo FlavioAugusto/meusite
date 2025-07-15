@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Google Maps Data Extractor",
+  "version": "1.0",
+  "description": "Extrai dados de locais do Google Maps e salva em Excel",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "notifications"
+  ],
+  "icons": {
+    "16": "icon16.svg",
+    "48": "icon48.svg", 
+    "128": "icon128.svg"
+  },
+  "host_permissions": [
+    "*://maps.google.com/*",
+    "*://www.google.com/maps/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Google Maps Data Extractor"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://maps.google.com/*",
+        "*://www.google.com/maps/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "google-maps-data-extractor",
+  "version": "1.0.0",
+  "description": "Extensão do Chrome para extrair dados do Google Maps e exportar para Excel",
+  "main": "popup.js",
+  "scripts": {
+    "build": "echo 'Extensão pronta para instalação!'",
+    "test": "echo 'Nenhum teste configurado ainda'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "google-maps",
+    "data-extraction",
+    "excel",
+    "csv",
+    "scraping"
+  ],
+  "author": "Desenvolvedor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "manifest": {
+    "manifest_version": 3,
+    "name": "Google Maps Data Extractor",
+    "version": "1.0"
+  }
+}
