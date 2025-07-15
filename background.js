@@ -140,25 +140,11 @@ class BackgroundService {
     }
 
     showWelcomeNotification() {
-        if (chrome.notifications) {
-            chrome.notifications.create({
-                type: 'basic',
-                iconUrl: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><text y="32" font-size="32">🗺️</text></svg>',
-                title: 'Maps Data Extractor',
-                message: 'Extensão instalada com sucesso! Acesse o Google Maps e clique no ícone da extensão para começar.'
-            });
-        }
+        console.log('Maps Data Extractor instalado com sucesso!');
     }
 
     showExtractionCompleteNotification(totalExtracted) {
-        if (chrome.notifications && totalExtracted > 0) {
-            chrome.notifications.create({
-                type: 'basic',
-                iconUrl: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><text y="32" font-size="32">✅</text></svg>',
-                title: 'Extração Concluída',
-                message: `${totalExtracted} locais extraídos com sucesso! Clique na extensão para baixar os dados.`
-            });
-        }
+        console.log(`Extração concluída! ${totalExtracted} locais extraídos.`);
     }
 }
 

@@ -6,14 +6,8 @@
   "permissions": [
     "activeTab",
     "storage",
-    "scripting",
-    "notifications"
+    "scripting"
   ],
-  "icons": {
-    "16": "icon16.svg",
-    "48": "icon48.svg", 
-    "128": "icon128.svg"
-  },
   "host_permissions": [
     "*://maps.google.com/*",
     "*://www.google.com/maps/*"
@@ -34,11 +28,5 @@
   ],
   "background": {
     "service_worker": "background.js"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["*.js"],
-      "matches": ["<all_urls>"]
-    }
-  ]
+  }
 }
